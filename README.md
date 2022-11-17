@@ -2,7 +2,7 @@
 # TensorLearn
 
 TensorLearn is a Python library distributed on [Pypi](https://pypi.org) for implementing 
-tensor learning 
+tensor learning methods.
 
 This is a package under development. Yet, the available methods are final and functional. The backend is [Numpy](https://numpy.org).
 
@@ -103,14 +103,14 @@ Compression ratio < float >
 tensorlearn.tensor_resize(tensor, new_shape)
 ```
 
-Reshape the given tensor to a new shape. The new size must be bigger than or equal to the original shape. If the new shape results in a tensor of greater size (number of elements) the tensor fills with zeros. 
+Reshape the given tensor to a new shape. The new size must be bigger than or equal to the original shape. If the new shape results in a tensor of greater size (number of elements) the tensor fills with zeros. This works similar to [numpy.ndarray.resize()](https://numpy.org/doc/stable/reference/generated/numpy.ndarray.resize.html)
 
-## Arguments
+### Arguments
 @tensor < numpy array > - the given tensor
 
 @new_shape < tuple > - new shape 
 
-## Return
+### Return
 tensor < numpy array > - tensor with new given shape
 
 ---
@@ -121,12 +121,12 @@ tensorlearn.unfold(tensor, n)
 ```
 Unfold the tensor with respect to dimension n.
 
-## Arguments
+### Arguments
 @tensor < numpy array > - tensor to be unfolded
 
 @n < int > - dimension based on which the tensor is unfolded
 
-## Return
+### Return
 matrix < numpy array > - unfolded tensor with respect to dimension n
 
 ---
@@ -139,10 +139,10 @@ tensorlearn.tensor_frobenius_norm(tensor)
 
 Calculate the [frobenius norm](https://mathworld.wolfram.com/FrobeniusNorm.html) of the given tensor.
 
-## Arguments
+### Arguments
 @tensor < numpy array > - the given tensor
 
-## Return
+### Return
 frobenius norm < float >
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
