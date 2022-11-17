@@ -163,5 +163,5 @@ Conduct a [compact svd](https://en.wikipedia.org/wiki/Singular_value_decompositi
 @error < float > - the given error in the range \[0,1\]
 
 ### Return
-r, u, s, vh < float, numpy array, numpy array, numpy array > 
+r, u, s, vh < int, numpy array, numpy array, numpy array > 
 
