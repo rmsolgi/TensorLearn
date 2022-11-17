@@ -145,12 +145,12 @@ frobenius norm < float >
 ```python
 tensorlearn.error_truncated_svd(x, error)
 ```
-Conduct a [compact svd](https://en.wikipedia.org/wiki/Singular_value_decomposition) and return [sigma (error)-truncated SVD](https://langvillea.people.cofc.edu/DISSECTION-LAB/Emmie%27sLSI-SVDModule/p5module.html) of a given matrix. This is an implementation using [numpy.linalg.svd](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html) with full_matrices=False. This method is used in [TT-SVD algorithm] in [auto_rank_tt] (#autoranktt-id).
+Conduct a [compact svd](https://en.wikipedia.org/wiki/Singular_value_decomposition) and return [sigma (error)-truncated SVD](https://langvillea.people.cofc.edu/DISSECTION-LAB/Emmie%27sLSI-SVDModule/p5module.html) of a given matrix. This is an implementation using [numpy.linalg.svd](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html) with full_matrices=False. This method is used in [TT-SVD algorithm](https://github.com/rmsolgi/TensorLearn/tree/main/Tensor-Train%20Decomposition#ttsvd-id) in [auto_rank_tt](#autoranktt-id).
 
 ## Arguments
-@x < 2D numpy array > - given matrix to be decomposed
+@x < 2D numpy array > - the given matrix to be decomposed
 
-@error < float > - in the range \[0,1\]
+@error < float > - the given error in the range \[0,1\]
 
 
 
