@@ -12,7 +12,7 @@ $$\textbf{$\mathcal{G}$}_j \in \mathbb{R}^{r_{j-1}\times n_j \times r_{j}}$$
 
 $$\hat{\textbf{{$\mathcal{Y}$}}}[i_1,...,i_d]=\sum_{l_0,...,l_d} {\textbf{$\mathcal{G}$}_1[l_0,i_1,l_1]\textbf{$\mathcal{G}$}_2[l_1,i_2,l_2]...\textbf{$\mathcal{G}$}_d[l_{d-1},i_d,l_d]}$$
 
-Given an error bound ($$\epsilon$$), the core factors, \textbf{$\mathcal{G}_j$}'s, are computed using ($d-1$) sequential singular value decomposition (SVD) of the auxiliary matrices formed by unfolding tensor \textbf{$\mathcal{Y}$} along different axes. This decomposition process which is called the TT-SVD is presented in Algorithm
+Given an error bound (epsilon), the core factors, $$\textbf{$\mathcal{G}_j$}'s$$, are computed using $d-1$ sequential singular value decomposition (SVD) of the auxiliary matrices formed by unfolding tensor $$\textbf{$\mathcal{Y}$}$$ along different axes. This decomposition process  is called the TT-SVD.
 
 
 
