@@ -3,7 +3,7 @@
 
 Tensor-Train decomposition is a [tensor decomposition](https://en.wikipedia.org/wiki/Tensor_decomposition) method presented by [Oseledets (2011)](https://epubs.siam.org/doi/10.1137/090752286).
 
-This implementation of tensor-train decomposition determines rank automatically based on a given error bound written according to TT-SVD Algorithm. Therefore the user does not need to specify ranks. Instead the user specifies an upper error bound [epsilon](#epsilon-id). 
+This implementation of tensor-train decomposition determines rank automatically based on a given error bound written according to [TT-SVD Algorithm](#ttsvd-id). Therefore the user does not need to specify ranks. Instead the user specifies an upper error bound [epsilon](#epsilon-id). 
 
 In the tensor train (TT) format, a $d$-way [tensor](https://en.wikipedia.org/wiki/Tensor): $$\textbf{$\mathcal{Y}$} \in \mathbb{R}^{n_1\times .... \times n_d}$$ is approximated with a set of $d$ cores
 
@@ -22,5 +22,6 @@ Given an error bound (<a name="epsilon-id"></a>epsilon), the core factors, $g_js
 
 $$epsilon\geq\frac{\lVert\textbf{$\mathcal{Y}$}-\textbf{$\hat{\mathcal{Y}}$}\lVert_F}{\lVert\textbf{$\mathcal{Y}$}\lVert_F}$$
 
+## <a name="ttsvd-id"></a>[TT-SVD Algorirthm](https://arxiv.org/abs/2205.10651)
 
 ![](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/tt_svd_algorithm.png) src:[Solgi et al. 2022](https://arxiv.org/abs/2205.10651)
