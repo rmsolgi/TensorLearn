@@ -43,6 +43,9 @@ This implementation of tensor-train decomposition determines rank automatically 
 @tensor <numpy array> - The given tensor to be decomposed.
 
 @epsilon <float> - Error bound = [frobenius norm](https://mathworld.wolfram.com/FrobeniusNorm.html) of the error / frobenius norm of the given tensor. 
+
+$error=\|X\|$
+
 ### Outputs
 @factors <list> - The list includes 2D numpy arrays of factors according to TT decomposition. Length of the list equals the dimension of the given tensor to be decomposed.
 
