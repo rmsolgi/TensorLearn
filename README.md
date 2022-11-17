@@ -52,6 +52,7 @@ This implementation of [tensor-train decomposition](https://github.com/rmsolgi/T
 ### Return
 TT factors < list of numpy arrays > - The list includes numpy arrays of factors (or TT cores) according to TT decomposition. Length of the list equals the dimension of the given tensor to be decomposed.
 
+[## Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 ## <a name="tttotensor-id"></a>tt_to_tensor
 
 ```python
@@ -60,7 +61,7 @@ tensorlearn.tt_to_tensor(factors)
 
 Return the full tensor given the TT factors
 
-###[Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
+[Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 
 ### Arguments
 @factors < list of numpy arrays > - TT factors
