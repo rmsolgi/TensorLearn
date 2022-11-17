@@ -1,6 +1,6 @@
 # Tensor-Train Decomposition
 
-In the tensor train (TT) format, a $d$-way tensor \textbf{$\mathcal{Y}$} $\in$ $$\mathbb{R}^{n_1\times .... \times n_d}$$ is approximated with a set of $d$ cores
+In the tensor train (TT) format, a $d$-way tensor: $$\textbf{$\mathcal{Y}$} \in \mathbb{R}^{n_1\times .... \times n_d}$$ is approximated with a set of $d$ cores
 
 $$\bar{\textbf{$\mathcal{G}$}}=\{\textbf{$\mathcal{G}$}_1, \textbf{$\mathcal{G}$}_2, ..., \textbf{$\mathcal{G}$}_d\}$$ 
 
