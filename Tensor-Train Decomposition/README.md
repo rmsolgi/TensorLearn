@@ -1,4 +1,8 @@
-# Tensor-Train Decomposition [tensorlearn.auto_rank_tt(tensor,epsilon)]
+# Tensor-Train Decomposition
+
+'''python
+tensorlearn.auto_rank_tt(tensor,epsilon)
+'''
 
 
 Tensor-Train decomposition is a [tensor decomposition](https://en.wikipedia.org/wiki/Tensor_decomposition) method presented by [Oseledets (2011)](https://epubs.siam.org/doi/10.1137/090752286).
