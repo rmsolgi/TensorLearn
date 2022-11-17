@@ -19,5 +19,5 @@ $$\hat{\textbf{{$\mathcal{Y}$}}}[i_1,...,i_d]=\sum_{l_0,...,l_d} {\textbf{$\math
 
 Given an error bound (epsilon), the core factors, $g_js$, are computed using $d-1$ sequential [singular value decomposition (SVD)](https://en.wikipedia.org/wiki/Singular_value_decomposition) of the auxiliary matrices formed by [unfolding tensor]() $Y$ along different axes. This decomposition process is called the TT-SVD. The error bound refers to the [Frobenius norm]() of the error between estimated and original tensor divided by the the Frobenius norm of the original tensor as below:
 
-<a name="epsilon-id"></a>
+<a> name="epsilon-id"></a>
 $$epsilon\geq\frac{\lVert\textbf{$\mathcal{Y}$}-\textbf{$\hat{\mathcal{Y}}$}\lVert_F}{\lVert\textbf{$\mathcal{Y}$}\lVert_F}$$
