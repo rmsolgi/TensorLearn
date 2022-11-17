@@ -3,7 +3,7 @@
 
 Tensor-Train decomposition is a [tensor decomposition](https://en.wikipedia.org/wiki/Tensor_decomposition) method presented by [Oseledets (2011)](https://epubs.siam.org/doi/10.1137/090752286).
 
-This implementation of tensor-train decomposition (see an example [here]()) determines rank automatically based on a given error bound written according to [TT-SVD Algorithm](#ttsvd-id). Therefore the user does not need to specify ranks. Instead the user specifies an upper error bound [epsilon](#epsilon-id). 
+This implementation of tensor-train decomposition (see an example [here](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)) determines rank automatically based on a given error bound written according to [TT-SVD Algorithm](#ttsvd-id). Therefore the user does not need to specify ranks. Instead the user specifies an upper error bound [epsilon](#epsilon-id). 
 
 In the tensor train (TT) format, a $d$-way [tensor](https://en.wikipedia.org/wiki/Tensor): $$\textbf{$\mathcal{Y}$} \in \mathbb{R}^{n_1\times .... \times n_d}$$ is approximated with a set of $d$ cores
 
