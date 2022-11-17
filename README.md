@@ -60,7 +60,7 @@ Return the full tensor given the TT factors
 ###[Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 
 ### Arguments
-@factors <list of numpy arrays> - TT factors
+@factors /<list of numpy arrays/> - TT factors
 
 ### Return
 full tensor <numpy array>
@@ -85,5 +85,3 @@ Compression ratio <float>
 
 
 
-
-    
