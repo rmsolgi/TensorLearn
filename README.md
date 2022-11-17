@@ -138,6 +138,8 @@ frobenius norm < float >
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 
+---
+
 
 
 ## <a name="etsvd-id"></a>error_truncated_svd
