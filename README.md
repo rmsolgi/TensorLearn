@@ -17,22 +17,22 @@ pip install tensorlearn
 
 ## methods
 ### Decomposition Methods
-[auto_rank_tt(tensor, error_bound)](#autoranktt-id)
+-[auto_rank_tt(tensor, error_bound)](#autoranktt-id)
 
 ### Tensor Operations for Tensor-Train 
-[tt_to_tensor(factors)](#tttotensor-id)
+-[tt_to_tensor(factors)](#tttotensor-id)
 
-[tt_compression_ratio(factors)](#ttcr-id)
+-[tt_compression_ratio(factors)](#ttcr-id)
 
 ### Tensor Operations
-[tensor_resize(tensor,new_shape)](#tensorresize-id)
+-[tensor_resize(tensor,new_shape)](#tensorresize-id)
 
-[unfold(tensor)](#unfold-id)
+-[unfold(tensor)](#unfold-id)
 
-[tensor_frobenius_norm(tensor)](#tfronorm-id)
+-[tensor_frobenius_norm(tensor)](#tfronorm-id)
 
 ### Matrix Operations
-[error_truncated_svd(x,error)](#etsvd-id)
+-[error_truncated_svd(x,error)](#etsvd-id)
 
 ---
 
@@ -85,8 +85,6 @@ full tensor < numpy array >
 tensorlearn.tt_compression_ratio(factors)
 ```
 Calculate [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for [tensor-train decompostion](https://github.com/rmsolgi/TensorLearn/tree/main/Tensor-Train%20Decomposition)
-
-[Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 
 ### Arguments
 @factors < list of numpy arrays > - TT factors
@@ -163,6 +161,7 @@ Conduct a [compact svd](https://en.wikipedia.org/wiki/Singular_value_decompositi
 @x < 2D numpy array > - the given matrix to be decomposed
 
 @error < float > - the given error in the range \[0,1\]
+
 
 
 
