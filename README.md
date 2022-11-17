@@ -1,1 +1,1 @@
-$$error=\|\|X\|\|_{F}-\|\|X\|\|_{F}$$
+<math>error=x</math>
