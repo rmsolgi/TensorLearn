@@ -1,7 +1,7 @@
 
-# tensorlearn
+# TensorLearn
 
-tensorlearn is a Python library distributed on [Pypi](https://pypi.org) for implementing 
+TensorLearn is a Python library distributed on [Pypi](https://pypi.org) for implementing 
 tensor learning 
 
 This is a package under development. Yet, the available methods are final and functional. The backend is [Numpy](https://numpy.org).
@@ -34,6 +34,7 @@ pip install tensorlearn
 ### Matrix Operations
 [error_truncated_svd(x,error)](#etsvd-id)
 
+---
 
 
 ## <a name="autoranktt-id"></a>auto_rank_tt
@@ -55,6 +56,9 @@ TT factors < list of numpy arrays > - The list includes numpy arrays of factors 
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 
+---
+
+
 ## <a name="tttotensor-id"></a>tt_to_tensor
 
 ```python
@@ -71,6 +75,9 @@ Return the full tensor given the TT factors
 full tensor < numpy array >
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
+
+---
+
 
 ## <a name="ttcr-id"></a>tt_compression_ratio
 
@@ -89,6 +96,8 @@ Compression ratio < float >
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 
+---
+
 
 ## <a name="tensorresize-id"></a>tensor_resize
 
@@ -106,6 +115,7 @@ Reshape the given tensor to a new shape. The new size must be bigger than or equ
 ## Return
 tensor < numpy array > - tensor with new given shape
 
+---
 
 ## <a name="unfold-id"></a>unfold
 ```python
@@ -121,6 +131,7 @@ Unfold the tensor with respect to dimension n.
 ## Return
 matrix < numpy array > - unfolded tensor with respect to dimension n
 
+---
 
 ## <a name="tfronorm-id"></a>tensor_frobenius_norm
 
@@ -139,7 +150,6 @@ frobenius norm < float >
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
 
 ---
-
 
 
 ## <a name="etsvd-id"></a>error_truncated_svd
