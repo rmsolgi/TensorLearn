@@ -3,6 +3,10 @@
 
 Tensor-Train decomposition is a [tensor decomposition](https://en.wikipedia.org/wiki/Tensor_decomposition) method presented by [Oseledets (2011)](https://epubs.siam.org/doi/10.1137/090752286).
 
+```python
+tensorlearn.auto_rank_tt(tensor, epsilon)
+```
+
 This implementation of tensor-train decomposition determines rank automatically based on a given error bound written according to TT-SVD Algorithm. Therefore the user does not need to specify ranks. Instead the user specifies an upper error bound [epsilon](#epsilon-id). 
 ```python
 
