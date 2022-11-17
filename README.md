@@ -1,7 +1,7 @@
 
-# TensorLearn
+# [TensorLearn](https://pypi.org/project/tensorlearn/)
 
-TensorLearn is a Python library distributed on [Pypi](https://pypi.org) for implementing 
+[TensorLearn](https://pypi.org/project/tensorlearn/) is a Python library distributed on [Pypi](https://pypi.org) for implementing 
 tensor learning methods.
 
 This is a package under development. Yet, the available methods are final and functional. The backend is [Numpy](https://numpy.org).
@@ -164,4 +164,5 @@ Conduct a [compact svd](https://en.wikipedia.org/wiki/Singular_value_decompositi
 
 ### Return
 r, u, s, vh < int, numpy array, numpy array, numpy array > 
+
 
