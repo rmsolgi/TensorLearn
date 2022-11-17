@@ -1,5 +1,4 @@
 
-
 # tensorlearn
 
 tensorlearn is a Python library distributed on [Pypi](https://pypi.org) for implementing 
@@ -18,19 +17,19 @@ pip install tensorlearn
 
 ## methods
 ### Decomposition Methods
-[tensorlearn.auto_rank_tt(tensor, error_bound)](#autoranktt-id)
+[auto_rank_tt(tensor, error_bound)](#autoranktt-id)
 
 ### Tensor Operations for Tensor-Train 
-[tensorlearn.tt_to_tensor(factors)](#tttotensor-id)
-[tensorlearn.tt_compression_ratio(factors)](#ttcr-id)
+[tt_to_tensor(factors)](#tttotensor-id)
+[tt_compression_ratio(factors)](#ttcr-id)
 
 ### Tensor Operations
-[tensorlearn.tensor_resize(tensor,new_shape)](#tensorresize-id)
-[tensorlearn.unfold(tensor)](#unfold-id)
-[tensorlearn.tensor_frobenius_norm(tensor)](#tfronorm-id)
+[tensor_resize(tensor,new_shape)](#tensorresize-id)
+[unfold(tensor)](#unfold-id)
+[tensor_frobenius_norm(tensor)](#tfronorm-id)
 
 ### Matrix Operations
-[tensorlearn.error_truncated_svd(x,error)](#etsvd-id)
+[error_truncated_svd(x,error)](#etsvd-id)
 
 
 
@@ -72,10 +71,10 @@ full tensor <numpy array>
 tensorlearn.tt_compression_ratio(factors)
 ```
 Calculate [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for [tensor-train decompostion](https://github.com/rmsolgi/TensorLearn/tree/main/Tensor-Train%20Decomposition)
-## Arguments
+### Arguments
 @factors <list of numpy arrays> - TT factors
 
-## Return
+### Return
 Compression ratio <float>
 
 
@@ -87,3 +86,4 @@ Compression ratio <float>
 
 
 
+    
