@@ -12,11 +12,11 @@ tensor = np.arange(0,1000)
 #reshaping it into a higher (3) dimensional tensor
 
 tensor = np.reshape(tensor,(10,20,5)) 
-epsilon=0.05
+epsilon=0.05 
 #decompose the tensor to its factors
 tt_factors=tl.auto_rank_tt(tensor, epsilon) #epsilon is the error bound
 
-#tt_factors is a list of three 2D array which are the tt-cores
+#tt_factors is a list of three arrays which are the tt-cores
 
 #rebuild (estimating) the tensor using the factors again as tensor_hat
 
