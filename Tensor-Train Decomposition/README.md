@@ -8,7 +8,7 @@ where
 
 $$\textbf{$\mathcal{G}$}_j \in \mathbb{R}^{r_{j-1}\times n_j \times r_{j}}$$
 
-, $r_j's$ for $j=1,...,d-1$ are the ranks, $r_0=r_d=1$, and each element of $$\textbf{$\mathcal{Y}$}$$ is approximated by :
+, $r_j^'s$ for $j=1,...,d-1$ are the ranks, $r_0=r_d=1$, and each element of $\textbf{$\mathcal{Y}$}$ is approximated by :
 
 
 $$E(\boldsymbol{\theta})=\frac{\lVert\textbf{$\mathcal{X}$}-\textbf{$\hat{\mathcal{X}}$}\lVert_F}{\lVert\textbf{$\mathcal{X}$}\lVert_F}$$
