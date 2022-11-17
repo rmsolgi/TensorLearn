@@ -1,1 +1,1 @@
-<math>error=x</math>
+<math>error=x<sub>2</sub></math>
