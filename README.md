@@ -63,7 +63,7 @@ Return the full tensor given the TT factors
 @factors <list of numpy arrays> - TT factors
 
 ### Return
-full tensor <numpy array>
+full tensor < numpy array >
 
 ## <a name="ttcr-id"></a>tt_compression_ratio
 
