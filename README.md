@@ -1,1 +1,1 @@
-<math>error=x<sub>2</sub></math>
+<math>error=\|\|X\|\|<sub>F</sub>&minus\|\|X\|\|<sub>F</sub></math>
