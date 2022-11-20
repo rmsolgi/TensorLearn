@@ -1,6 +1,6 @@
 ## CANDECOMP/PARAFAC (CP) Decomposition
 
-CP decomposition is a tensor decomposition method. cp_als_rand_init is a method of TensorLearn package for implementing CP decomposition with random initialization of the [factor matrices](#factormatrices-id).
+CP decomposition is a tensor decomposition method. cp_als_rand_init is a method of TensorLearn package for implementation of CP decomposition using [ALS](#alsalgorithm-id) algorithm with random initialization of the [factor matrices](#factormatrices-id).
 
 
 ```python
@@ -47,7 +47,7 @@ ds= 1- (1/cr)
 print('data_saving (%): ', ds*100)
 ```
 
-According to the CP decomposition a tensor $X$ can be estimated by its factors as below:
+According to the [CP decomposition](https://en.wikipedia.org/wiki/Tensor_rank_decomposition) a tensor $X$ can be estimated by its factors as below:
 
 $\hat{X} = \sum_r \lambda_{r} a_r^{(1)} \otimes a_r^{(2)} \otimes ... \otimes a_r^{(N)}$
 
@@ -59,7 +59,7 @@ where $a_r^{(n)} \in \mathbb{R}^{I_n}$ is a unit vector where $I_n$ is the size 
 <a name="factormatrices-id"></a>Usually all $a_r^{(n)}$ for each mode $n$ for $n=1,2,...,N$ are collected as a matrix and called factor matrices, i.e., $A_n=[a_1^{(n)},a_2^{(n)},...,a_r^{(n)},...,a_R^{(n)}]$
 
 
-To compute CP decomposition, one method is alternative least squares (ALS) algorithm as below:
+<a name="alsalgorithm-id"></a>To compute CP decomposition, one method is alternative least squares (ALS) algorithm as below:
 
 ![](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/cp_als_algorithm.png)
 [source (Minster et al., 2021)](https://arxiv.org/abs/2112.10855)
