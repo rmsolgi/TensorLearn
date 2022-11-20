@@ -88,9 +88,12 @@ This is an implementation of [CANDECOMP/PARAFAC (CP) decomposition](https://en.w
 - weights < array >: the vector of normalization weights (lambda) in CP decomposition
 
 - factors < list of arrays >: factor matrices of the CP decomposition
----
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP_example.py)
+
+---
+
+
 
 
 
