@@ -10,5 +10,6 @@ where $a_r^{(n)} \in \mathbb{R}^{I_n}$ is a unit vector where $I_n$ is the size 
 
 To compute CP decomposition, one method is alternative least squares (ALS) algorithm as below:
 
-![]()
+![](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/cp_als_algorithm.png)
+[source (Minster et al., 2021)](https://arxiv.org/abs/2112.10855)
 
