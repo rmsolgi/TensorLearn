@@ -1,4 +1,12 @@
 ## CANDECOMP/PARAFAC (CP) Decomposition
+
+CP decomposition is a tensor decomposition method. cp_als_rand_init is a method of TensorLearn package for implementing CP decomposition with random initialization of the factor matrices.
+
+```python
+tensorlearn.cp_als_rand_init(tensor,rank,iterations)
+```
+
+
 According to the CP decomposition a tensor $X$ can be estimated by its factors as below:
 
 $\hat{X} = \sum_r \lambda_{r} a_r^{(1)} \otimes a_r^{(2)} \otimes ... \otimes a_r^{(N)}$
