@@ -69,7 +69,7 @@ Given an error bound (<a name="epsilon-id"></a>epsilon), the core factors, $g_js
 
 $$epsilon\geq\frac{\lVert\textbf{$\mathcal{Y}$}-\textbf{$\hat{\mathcal{Y}}$}\lVert_F}{\lVert\textbf{$\mathcal{Y}$}\lVert_F}$$
 
-## TT-SVD Algorithm
+## TT-SVD Algorithm ([Solgi et al., 2022](https://arxiv.org/abs/2205.10651))
 
 ![](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/tt_svd_algorithm.png)
 source: [Solgi et al., 2022](https://arxiv.org/abs/2205.10651)
