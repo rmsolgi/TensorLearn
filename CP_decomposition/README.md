@@ -8,6 +8,7 @@ tensorlearn.cp_als_rand_init(tensor,rank,iterations)
 ```
 
 ## Example
+```python
 """
 @author: Ryan Solgi
 """
@@ -44,7 +45,7 @@ print('data compression ratio = ',cr)
 ds= 1- (1/cr)
 
 print('data_saving (%): ', ds*100)
-
+```
 
 According to the CP decomposition a tensor $X$ can be estimated by its factors as below:
 
