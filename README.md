@@ -72,7 +72,7 @@ This implementation of [tensor-train decomposition](https://github.com/rmsolgi/T
 tensorlearn.cp_als_rand_init(tensor, rank, iteration, random_seed=None)
 ```
 
-This is an implementation of [CANDECOMP/PARAFAC (CP) decomposition](https://en.wikipedia.org/wiki/Tensor_rank_decomposition) using [alternating least squares (ALS) algorithm](https://arxiv.org/abs/2112.10855) with random initialization of factors.
+This is an implementation of [CANDECOMP/PARAFAC (CP) decomposition](https://github.com/rmsolgi/TensorLearn/tree/main/CP_decomposition) using [alternating least squares (ALS) algorithm](https://arxiv.org/abs/2112.10855) with random initialization of factors.
 
 ### Arguments 
 - tensor < array >: the given tensor to be decomposed
