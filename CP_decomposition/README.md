@@ -1,4 +1,6 @@
 ## CANDECOMP/PARAFAC (CP) Decomposition
 According to the CP decomposition a tensor $X$ can be estimated by its factors as below:
 
-$\hat{X} = \sum_{r=1}^{R} \lambda_{r}$
+$\hat{X} = \sum_{r=1} ^{R} \lambda_{r}$
+
+$\sum_{n=1}^{\infty} 2^{-n} = 1$
