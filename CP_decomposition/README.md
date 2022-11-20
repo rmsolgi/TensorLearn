@@ -12,7 +12,7 @@ According to the CP decomposition a tensor $X$ can be estimated by its factors a
 
 $\hat{X} = \sum_r \lambda_{r} a_r^{(1)} \otimes a_r^{(2)} \otimes ... \otimes a_r^{(N)}$
 
-where $a_r^{(n)} \in \mathbb{R}^{I_n}$ is a unit vector where $I_n$ is the size of the dimension $n$ with weight vector $\lambda \in \mathbb{R}^{R}$ where $R$ is the rank and $\otimes$ denotes outer product. Usually all $a_r^{(n)}$ for each mode $n$ for $n=1,2,...,N$ are collected as a matrix and called <a name="epsilon-id"></a>factor matrices, i.e., $A_n=[a_1^{(n)},a_2^{(n)},...,a_r^{(n)},...,a_R^{(n)}]$
+where $a_r^{(n)} \in \mathbb{R}^{I_n}$ is a unit vector where $I_n$ is the size of the dimension $n$ with weight vector $\lambda \in \mathbb{R}^{R}$ where $R$ is the rank and $\otimes$ denotes outer product. Usually all $a_r^{(n)}$ for each mode $n$ for $n=1,2,...,N$ are collected as a matrix and called <a name="factormatrices-id"></a>factor matrices, i.e., $A_n=[a_1^{(n)},a_2^{(n)},...,a_r^{(n)},...,a_R^{(n)}]$
 
 ![](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP%20Fig.png)
 [source (Minster et al., 2021)](https://arxiv.org/abs/2112.10855)
