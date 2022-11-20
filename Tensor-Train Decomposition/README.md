@@ -72,4 +72,4 @@ $$epsilon\geq\frac{\lVert\textbf{$\mathcal{Y}$}-\textbf{$\hat{\mathcal{Y}}$}\lVe
 ## TT-SVD Algorithm
 
 ![](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/tt_svd_algorithm.png)
-source: 
+source: [Solgi et al., 2022](https://arxiv.org/abs/2205.10651)
