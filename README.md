@@ -256,7 +256,7 @@ This method conducts a [compact svd](https://en.wikipedia.org/wiki/Singular_valu
 ```python
 tensorlearn.column_wise_kronecker(a, b)
 ```
-Returns the column wise Kronecker product (Sometimes known as Khatri Rao) of two given matrices.
+Returns the [column wise Kronecker product (Sometimes known as Khatri Rao)](https://en.wikipedia.org/wiki/Khatri–Rao_product) of two given matrices.
 
 ### Arguments
 
