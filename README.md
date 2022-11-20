@@ -138,7 +138,7 @@ Returns [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_
 
 ## <a name="cptotensor-id"></a>cp_to_tensor
 
-Return the full tensor given the CP factor matrices and weights
+Returns the full tensor given the CP factor matrices and weights
 
 
 ```python
