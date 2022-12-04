@@ -161,7 +161,7 @@ tensorlearn.cp_to_tensor(weights, factors)
 
 ## <a name="cpcr-id"></a>cp_compression_ratio
 
-Returns [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for [CP- decompostion](https://github.com/rmsolgi/TensorLearn/tree/Version-1.1.1/CP_decomposition)
+Returns [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for [CP- decompostion](https://github.com/rmsolgi/TensorLearn/tree/main/CP_decomposition)
 
 ```python
 tensorlearn.cp_compression_ratio(weights, factors)
