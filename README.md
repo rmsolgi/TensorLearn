@@ -26,7 +26,7 @@ pip install tensorlearn
 
 - [tt_compression_ratio](#ttcr-id)
 
-### Tensor Operations for CANDECOM/PARAFAC (CP)
+### Tensor Operations for CANDECOMP/PARAFAC (CP)
 - [cp_to_tensor](#cptotensor-id)
 
 - [cp_compression_ratio](#cpcr-id)
@@ -124,7 +124,7 @@ Returns the full tensor given the TT factors
 tensorlearn.tt_compression_ratio(factors)
 ```
 
-Returns [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for [tensor-train decompostion](https://github.com/rmsolgi/TensorLearn/tree/main/Tensor-Train%20Decomposition)
+Returns [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for [tensor-train decompostion](https://github.com/rmsolgi/TensorLearn/tree/main/CP_decomposition)
 
 ### Arguments
 - factors < list of numpy arrays >: TT factors
