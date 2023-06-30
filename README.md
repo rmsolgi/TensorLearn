@@ -33,6 +33,12 @@ pip install tensorlearn
 
 - [cp_compression_ratio](#cpcr-id)
 
+### Tensor Operations for Tucker
+- [tucker_to_tensor](#tuckertotensor-id)
+
+- [tucker_compression_ratio](#tuckercr-id)
+
+
 ### Tensor Operations
 - [tensor_resize](#tensorresize-id)
 
@@ -100,7 +106,7 @@ This is an implementation of [CANDECOMP/PARAFAC (CP) decomposition](https://gith
 tensorlearn.tucker_hosvd(tensor, epsilon)
 ```
 
-This implementation of Tucker decomposition determines the rank automatically based on a given error bound HOSVD algorithm. Therefore the user does not need to specify the rank. Instead the user specifies an upper error bound (epsilon) which bounds the error of the decomposition uisng Frobenius norm. 
+This implementation of Tucker decomposition determines the rank automatically based on a given error bound using HOSVD algorithm. Therefore the user does not need to specify the rank. Instead the user specifies an upper error bound (epsilon) which bounds the error of the decomposition uisng Frobenius norm. 
 
 ### Arguments 
 - tensor < array >: The given tensor to be decomposed.
@@ -193,7 +199,28 @@ tensorlearn.cp_compression_ratio(weights, factors)
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP_example.py)
 
+
 ---
+
+## <a name="tuckertotensor-id"></a>tucker_to_tensor
+
+Returns the full tensor given the tucker factor core and factor matrices
+
+
+```python
+tensorlearn.tucker_to_tensor(core_factor, factor_matrices)
+```
+
+### Arguments
+- core_factor < array >: the core factor of Tucker format
+
+- factors < list of arrays >: factor matrices of the Tucker format
+
+### Return
+- full tensor < array >
+
+---
+
 
 ## <a name="tensorresize-id"></a>tensor_resize
 
