@@ -19,7 +19,7 @@ pip install tensorlearn
 ### Decomposition Methods
 - Tensor Train ([auto_rank_tt](#autoranktt-id))
 
-- CANDECOMP?PARAFAC ([cp_als_rand_init](#cpalsrandinit-id))
+- CANDECOMP/PARAFAC ([cp_als_rand_init](#cpalsrandinit-id))
 
 - Tucker ([tucker_hosvd](#tuckerhosvd-id))
 
