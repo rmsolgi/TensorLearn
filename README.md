@@ -21,6 +21,8 @@ pip install tensorlearn
 
 - [cp_als_rand_init](#cpalsrandinit-id)
 
+- [tucker_hosvd](#tuckerhosvd-id)
+
 ### Tensor Operations for Tensor-Train 
 - [tt_to_tensor](#tttotensor-id)
 
@@ -93,9 +95,22 @@ This is an implementation of [CANDECOMP/PARAFAC (CP) decomposition](https://gith
 
 ---
 
+## <a name="tuckerhosvd-id"></a>tucker_hosvd
+```python
+tensorlearn.tucker_hosvd(tensor, epsilon)
+```
 
+This implementation of Tucker decomposition determines the rank automatically based on a given error bound HOSVD algorithm. Therefore the user does not need to specify the rank. Instead the user specifies an upper error bound (epsilon) which bounds the error of the decomposition uisng Frobenius norm. 
 
+### Arguments 
+- tensor < array >: The given tensor to be decomposed.
 
+- epsilon < float >: [The error bound of decomposition](https://github.com/rmsolgi/TensorLearn/tree/main/Tensor-Train%20Decomposition#epsilon-id) in the range \[0,1\].
+
+### Return
+- core factor < array >: The core factor of Tucker decomposition 
+
+- factor matrices < list of arrays >: The factor matrices 
 
 ## <a name="tttotensor-id"></a>tt_to_tensor
 
