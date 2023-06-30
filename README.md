@@ -17,11 +17,11 @@ pip install tensorlearn
 
 ## methods
 ### Decomposition Methods
-- [auto_rank_tt](#autoranktt-id)
+- Tensor Train ([auto_rank_tt](#autoranktt-id))
 
-- [cp_als_rand_init](#cpalsrandinit-id)
+- CANDECOMP?PARAFAC ([cp_als_rand_init](#cpalsrandinit-id))
 
-- [tucker_hosvd](#tuckerhosvd-id)
+- Tucker ([tucker_hosvd](#tuckerhosvd-id))
 
 ### Tensor Operations for Tensor-Train 
 - [tt_to_tensor](#tttotensor-id)
