@@ -212,12 +212,32 @@ tensorlearn.tucker_to_tensor(core_factor, factor_matrices)
 ```
 
 ### Arguments
-- core_factor < array >: the core factor of Tucker format
+- core_factor < array >: the core factor of the Tucker format
 
 - factors < list of arrays >: factor matrices of the Tucker format
 
 ### Return
 - full tensor < array >
+
+---
+
+
+## <a name="tuckercr-id"></a>tucker_compression_ratio
+
+Returns [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for tucker decomposition.
+
+```python
+tensorlearn.tucker_compression_ratio(core_factor, factor_matrices)
+```
+
+### Arguments
+- core_factor < array >: the core factor of the Tucker format
+
+- factors < list of arrays >: factor matrices of the Tucker format
+
+### Return
+
+- Compression ratio < float >
 
 ---
 
