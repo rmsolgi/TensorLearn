@@ -105,7 +105,7 @@ This implementation of Tucker decomposition determines the rank automatically ba
 ### Arguments 
 - tensor < array >: The given tensor to be decomposed.
 
-- epsilon < float >: [The error bound of decomposition](https://github.com/rmsolgi/TensorLearn/tree/main/Tensor-Train%20Decomposition#epsilon-id) in the range \[0,1\].
+- epsilon < float >: The error bound of decomposition in the range \[0,1\].
 
 ### Return
 - core factor < array >: The core factor of Tucker decomposition 
