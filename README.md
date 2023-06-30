@@ -46,6 +46,8 @@ pip install tensorlearn
 
 - [tensor_frobenius_norm](#tfronorm-id)
 
+- [tensor-matrix-product/mode-n-product](#modenproduct-id)
+
 ### Matrix Operations
 - [error_truncated_svd](#etsvd-id)
 
@@ -294,6 +296,24 @@ Calculates the [frobenius norm](https://mathworld.wolfram.com/FrobeniusNorm.html
 
 ---
 
+## <a name="modenproduct-id"></a>mode_n_product
+
+```python
+tensorlearn.mode_n_product(tensor, matrix, n)
+```
+
+Return product of a tensor by a matrix at mode n.
+
+### Arguments
+- tensor < array >: the given tensor
+- matrix <2D array>: the given matrix
+
+- n < integer >: mode of tensor 
+
+### Return
+- tensor < array >: tensor product
+
+---
 
 ## <a name="etsvd-id"></a>error_truncated_svd
 
