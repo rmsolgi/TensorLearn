@@ -1,9 +1,10 @@
+
 # TensorLearn
 
 TensorLearn is a Python library distributed on [Pypi](https://pypi.org) to implement 
 tensor learning methods.
 
-This is a project under development. Yet, the available methods are final and functional. The requirment is [Numpy](https://numpy.org).
+This is a project under development. Yet, the available methods are functional. The requirment is [Numpy](https://numpy.org).
 
     
 ## Installation
@@ -16,9 +17,11 @@ pip install tensorlearn
 
 ## methods
 ### Decomposition Methods
-- [auto_rank_tt](#autoranktt-id)
+- Tensor Train ([auto_rank_tt](#autoranktt-id))
 
-- [cp_als_rand_init](#cpalsrandinit-id)
+- CANDECOMP/PARAFAC ([cp_als_rand_init](#cpalsrandinit-id))
+
+- Tucker ([tucker_hosvd](#tuckerhosvd-id))
 
 ### Tensor Operations for Tensor-Train 
 - [tt_to_tensor](#tttotensor-id)
@@ -30,12 +33,20 @@ pip install tensorlearn
 
 - [cp_compression_ratio](#cpcr-id)
 
+### Tensor Operations for Tucker
+- [tucker_to_tensor](#tuckertotensor-id)
+
+- [tucker_compression_ratio](#tuckercr-id)
+
+
 ### Tensor Operations
 - [tensor_resize](#tensorresize-id)
 
 - [unfold](#unfold-id)
 
 - [tensor_frobenius_norm](#tfronorm-id)
+
+- [tensor-matrix-product/mode-n-product](#modenproduct-id)
 
 ### Matrix Operations
 - [error_truncated_svd](#etsvd-id)
@@ -92,9 +103,22 @@ This is an implementation of [CANDECOMP/PARAFAC (CP) decomposition](https://gith
 
 ---
 
+## <a name="tuckerhosvd-id"></a>tucker_hosvd
+```python
+tensorlearn.tucker_hosvd(tensor, epsilon)
+```
 
+This implementation of Tucker decomposition determines the rank automatically based on a given error bound using HOSVD algorithm. Therefore the user does not need to specify the rank. Instead the user specifies an upper error bound (epsilon) which bounds the error of the decomposition uisng Frobenius norm. 
 
+### Arguments 
+- tensor < array >: The given tensor to be decomposed.
 
+- epsilon < float >: The error bound of decomposition in the range \[0,1\].
+
+### Return
+- core factor < array >: The core factor of Tucker decomposition 
+
+- factor matrices < list of arrays >: The factor matrices 
 
 ## <a name="tttotensor-id"></a>tt_to_tensor
 
@@ -177,7 +201,48 @@ tensorlearn.cp_compression_ratio(weights, factors)
 
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP_example.py)
 
+
 ---
+
+## <a name="tuckertotensor-id"></a>tucker_to_tensor
+
+Returns the full tensor given the tucker factor core and factor matrices
+
+
+```python
+tensorlearn.tucker_to_tensor(core_factor, factor_matrices)
+```
+
+### Arguments
+- core_factor < array >: the core factor of the Tucker format
+
+- factors < list of arrays >: factor matrices of the Tucker format
+
+### Return
+- full tensor < array >
+
+---
+
+
+## <a name="tuckercr-id"></a>tucker_compression_ratio
+
+Returns [data compression ratio](https://en.wikipedia.org/wiki/Data_compression_ratio) for tucker decomposition.
+
+```python
+tensorlearn.tucker_compression_ratio(core_factor, factor_matrices)
+```
+
+### Arguments
+- core_factor < array >: the core factor of the Tucker format
+
+- factors < list of arrays >: factor matrices of the Tucker format
+
+### Return
+
+- Compression ratio < float >
+
+---
+
 
 ## <a name="tensorresize-id"></a>tensor_resize
 
@@ -231,18 +296,36 @@ Calculates the [frobenius norm](https://mathworld.wolfram.com/FrobeniusNorm.html
 
 ---
 
+## <a name="modenproduct-id"></a>mode_n_product
+
+```python
+tensorlearn.mode_n_product(tensor, matrix, n)
+```
+
+Return product of a tensor by a matrix at mode n.
+
+### Arguments
+- tensor < array >: the given tensor
+- matrix <2D array>: the given matrix
+
+- n < integer >: mode of tensor 
+
+### Return
+- tensor < array >: tensor product
+
+---
 
 ## <a name="etsvd-id"></a>error_truncated_svd
 
 ```python
 tensorlearn.error_truncated_svd(x, error)
 ```
-This method conducts a [compact svd](https://en.wikipedia.org/wiki/Singular_value_decomposition) and return [sigma (error)-truncated SVD](https://langvillea.people.cofc.edu/DISSECTION-LAB/Emmie%27sLSI-SVDModule/p5module.html) of a given matrix. This is an implementation using [numpy.linalg.svd](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html) with full_matrices=False. This method is used in [TT-SVD algorithm](https://github.com/rmsolgi/TensorLearn/tree/main/Tensor-Train%20Decomposition#ttsvd-id) in [auto_rank_tt](#autoranktt-id).
+This method conducts a [compact svd](https://en.wikipedia.org/wiki/Singular_value_decomposition) and return [sigma (error)-truncated SVD](https://langvillea.people.cofc.edu/DISSECTION-LAB/Emmie%27sLSI-SVDModule/p5module.html) of a given matrix. This is an implementation using [numpy.linalg.svd](https://numpy.org/doc/stable/reference/generated/numpy.linalg.svd.html) with full_matrices=False. 
 
 ### Arguments
 - x < 2D array >: the given matrix to be decomposed
 
-- error < float >: the given error in the range \[0,1\]
+- error < float >: the given error (equal to the norm of the error matrix)
 
 ### Return
 - r, u, s, vh < int, numpy array, numpy array, numpy array > 
@@ -264,5 +347,7 @@ Returns the [column wise Kronecker product (Sometimes known as Khatri Rao)](http
 ### Return
 
 - column wise Kronecker product < array >
+
+
 
 
