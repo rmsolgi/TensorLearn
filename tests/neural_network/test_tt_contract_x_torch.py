@@ -6,8 +6,6 @@ import tensorlearn
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src/tensorlearn/neural_network/torch')))
 import utils
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src/tensorlearn/decomposition')))
-import tensor_train
 
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
