@@ -36,10 +36,12 @@ def mode_n_product(tensor,matrix,n):
 def tt_tensor_shape(factors):
     
 
-    t_shape=[f.shape[1] for f in factors]
+    t_shape=tuple([f.shape[1] for f in factors])
     return t_shape
 
-
+def tt_ranks(factors):
+    ranks=tuple([f.shape[0] for f in factors]+[1])
+    return ranks
 
     ###################### making tensor from factors 
     ###################### ###################### ###################### ######################  
@@ -178,9 +180,13 @@ def cp_compression_ratio(weights,factors):
 
 def tucker_tensor_shape(factor_matrices):
     
-    t_shape=[f.shape[0] for f in factor_matrices]
+    t_shape=tuple([f.shape[0] for f in factor_matrices])
     
     return t_shape
+
+def tucker_ranks(core_factor):
+    return core_factor.shape
+
 
 
     ###################### Tuckers factors to tensor

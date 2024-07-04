@@ -31,6 +31,14 @@ def tt_to_tensor(factors):
         
 def tt_compression_ratio(factors):
     return top.tt_compression_ratio(factors)
+
+def tt_tensor_shape(factors):
+    return top.tt_tensor_shape(factors)
+
+def tt_ranks(factors):
+    return top.tt_ranks(factors)
+
+
     
     
 ## General
@@ -63,7 +71,13 @@ def tucker_to_tensor(core_factor,factor_matrices):
 
 def tucker_compression_ratio(core_factor,factor_matrices):
     return top.tucker_compression_ratio(core_factor,factor_matrices)
-    
+
+def tucker_tensor_shape(factor_matrices):
+    return top.tucker_tensor_shape(factor_matrices)
+
+def tucker_ranks(core_factor):
+    return top.tucker_ranks(core_factor)
+
 
 
 ############################################################

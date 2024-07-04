@@ -24,7 +24,7 @@ SOFTWARE.
 from . import decomposition
 from . import operations
 from . import tl_methods
-from .tl_methods import auto_rank_tt, unfold, mode_n_product, tt_to_tensor, tensor_resize, tensor_frobenius_norm, error_truncated_svd, tt_compression_ratio, cp_als_rand_init, cp_to_tensor, cp_compression_ratio, column_wise_kronecker, tucker_hosvd, tucker_to_tensor, tucker_compression_ratio, cp_completion_als
+from .tl_methods import auto_rank_tt, unfold, mode_n_product, tt_to_tensor, tensor_resize, tensor_frobenius_norm, error_truncated_svd, tt_compression_ratio, tt_tensor_shape, tt_ranks, cp_als_rand_init, cp_to_tensor, cp_compression_ratio, column_wise_kronecker, tucker_hosvd, tucker_to_tensor, tucker_compression_ratio, tucker_tensor_shape, tucker_ranks, cp_completion_als
 
 from . import shape_search
 from . import tensor_completion
