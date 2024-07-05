@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
 
-import utils
+from tensorlearn.neural_network.torch import utils
 
 
 class TTLinear(nn.Module):

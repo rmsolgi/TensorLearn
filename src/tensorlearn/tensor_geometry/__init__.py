@@ -1,1 +1,1 @@
-from . import utils, tensor_geometry_graph, tensor_geometry_optimization
+from . import utils, tensor_geometry_graph, nn_tensor_geometry_optimization

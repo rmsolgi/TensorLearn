@@ -1,4 +1,7 @@
 import torch
+from tensorlearn.tensor_geometry import tensor_geometry_graph as tgg
+from tensorlearn.decomposition import tensor_train as tt
+from tensorlearn.decomposition import tucker 
 
 
 def tt_contract_x(factors,x,num_batch_dims): #for fully connected layer num_batch_dims=1, for CNN is 3
@@ -44,3 +47,24 @@ def tucker_contract_x(factors, x, num_batch_dims): #for fully connected layer nu
 
 
     
+def get_tensorized_layer_balanced_shape(in_feature,out_feature,in_order,out_order):
+    shapes_list=tgg.dyadic_cartesian(in_feature, out_feature, in_order, out_order)
+    optimal_shape = min(shapes_list, key=sum)
+    return optimal_shape
+
+
+def get_tt_factors(matrix, tensor_shape, error):
+    tensor=matrix.view(tensor_shape)
+    tt_factors=tt.auto_rank_tt(tensor.numpy(), error)
+    factors=[torch.from_numpy(f) for f in tt_factors]
+    return factors
+
+def get_tucker_factors(matrix, tensor_shape, error):
+    tensor=matrix.view(tensor_shape)
+    tucker_core_factor, tucker_factor_matrices=tucker.tucker_hosvd(tensor.numpy(), error)
+    core_factor=torch.from_numpy(tucker_core_factor)
+    factor_matrices=[torch.from_numpy(f) for f in tucker_factor_matrices]
+    return core_factor, factor_matrices
+
+
+

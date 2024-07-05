@@ -1,4 +1,4 @@
-from . import tensor_geometry_graph as tgg
+from tensorlearn.tensor_geometry import tensor_geometry_graph as tgg
 
 
 def get_balanced_shape(num_in_features, num_out_features, in_order, out_order):

@@ -1,7 +1,7 @@
 
-from . import utils
-import copy
 
+import copy
+from tensorlearn.tensor_geometry import utils
 
 #########################################################################
 #########################################################################
