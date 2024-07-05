@@ -28,6 +28,7 @@ from .tl_methods import auto_rank_tt, unfold, mode_n_product, tt_to_tensor, tens
 
 from . import shape_search
 from . import tensor_completion
+from . import tensor_geometry
 
 
 
