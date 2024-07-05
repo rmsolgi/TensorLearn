@@ -1,7 +1,7 @@
 import torch
 from tensorlearn.tensor_geometry import tensor_geometry_graph as tgg
-from tensorlearn.decomposition import tensor_train as tt
-from tensorlearn.decomposition import tucker 
+from tensorlearn.decomposition.factorization import tt_factorization as tt
+from tensorlearn.decomposition.factorization import tucker_factorization as tucker
 
 
 def tt_contract_x(factors,x,num_batch_dims): #for fully connected layer num_batch_dims=1, for CNN is 3
@@ -55,16 +55,21 @@ def get_tensorized_layer_balanced_shape(in_feature,out_feature,in_order,out_orde
 
 def get_tt_factors(matrix, tensor_shape, error):
     tensor=matrix.view(tensor_shape)
-    tt_factors=tt.auto_rank_tt(tensor.numpy(), error)
+    decomp=tt(tensor.numpy(), error)
+    tt_factors=decomp.factors
     factors=[torch.from_numpy(f) for f in tt_factors]
-    return factors
+    ranks=decomp.rank
+    return factors, ranks
 
 def get_tucker_factors(matrix, tensor_shape, error):
     tensor=matrix.view(tensor_shape)
-    tucker_core_factor, tucker_factor_matrices=tucker.tucker_hosvd(tensor.numpy(), error)
+    decomp=tucker(tensor.numpy(), error)
+    tucker_core_factor=decomp.core_factor
+    tucker_factor_matrices=decomp.factor_matrices
     core_factor=torch.from_numpy(tucker_core_factor)
     factor_matrices=[torch.from_numpy(f) for f in tucker_factor_matrices]
-    return core_factor, factor_matrices
+    ranks=decomp.rank
+    return core_factor, factor_matrices, ranks
 
 
 
