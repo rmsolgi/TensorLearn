@@ -1,1 +1,1 @@
-from . import low_rank_tensorized_layers, utils
+from . import low_rank_tensorized_layers, utils, config
