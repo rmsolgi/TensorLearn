@@ -45,7 +45,6 @@ def tucker_contract_x(factors, x, num_batch_dims): #for fully connected layer nu
     
     return output
 
-
     
 def get_tensorized_layer_balanced_shape(in_feature,out_feature,in_order,out_order):
     shapes_list=tgg.dyadic_cartesian(in_feature, out_feature, in_order, out_order)
@@ -69,7 +68,24 @@ def get_tucker_factors(matrix, tensor_shape, error):
     core_factor=torch.from_numpy(tucker_core_factor)
     factor_matrices=[torch.from_numpy(f) for f in tucker_factor_matrices]
     ranks=decomp.rank
-    return core_factor, factor_matrices, ranks
+    return [core_factor, factor_matrices], ranks
+
+def nn_tensor_geometry_optimization(weight,config):
+    in_order=config.in_order
+    out_order=config.out_order
+    error=config.error
+    weight_shape=weight.size()
+    in_feature=weight_shape[0]
+    out_feature=weight_shape[1]
+    dim_list=config.get_shape(in_feature,out_feature,in_order,out_order)
+    factors, rank_list=config.get_factors(weight,dim_list,error)
+    return factors, rank_list, dim_list
+
+
+def check_none(*args):
+    return all(arg is not None for arg in args)
+
+
 
 
 

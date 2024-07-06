@@ -6,7 +6,7 @@ import tensorlearn as tl
 import torch.nn as nn
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src/tensorlearn/neural_network/torch')))
-from low_rank_tensorized_layers import TTLinear
+from low_rank_tensorized_layers import LRTLinear
 #sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
 
 
@@ -44,7 +44,7 @@ output_linear = linear_layer(input_tensor)
 ranks=tuple([f.shape[0] for f in factors]+[1])
 dims=tuple(f.shape[1] for f in factors)
 
-ttlinear_layer=TTLinear(dims,ranks,2, bias=use_bias)
+ttlinear_layer=LRTLinear('tt',dims,ranks,2, bias=use_bias)
 
 with torch.no_grad():
     for i, f in enumerate(factors_torch):
@@ -59,4 +59,5 @@ print(output_tt[0,0,:])
 
 error=output_linear-output_tt
 print(tl.tensor_frobenius_norm(error.detach().numpy()))
+
 

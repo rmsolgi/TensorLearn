@@ -1,13 +1,11 @@
-import sys
-import os
-import torch
-import numpy as np
-import tensorlearn as tl
 import torch.nn as nn
+import torch
+import tensorlearn as tl
+import numpy as np
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src/tensorlearn/neural_network/torch')))
-from low_rank_tensorized_layers import TTLinear
-#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../src')))
+from tensorlearn.neural_network.torch import config, utils
+from tensorlearn.neural_network.torch.low_rank_tensorized_layers import LRTLinear
+
 
 
 ########### Linear From Torch #################
@@ -18,7 +16,8 @@ W = torch.randn(n, m)
 W_tensor=W.view(10,3,10,4)
 W_tensor_array=W_tensor.numpy()
 
-factors=tl.auto_rank_tt(W_tensor_array,0.01)
+factors=tl.auto_rank_tt(W_tensor_array,1)
+
 
 W_hat_tensor=tl.tt_to_tensor(factors)
 W_hat_matrix=np.reshape(W_hat_tensor,(30,40)) 
@@ -44,7 +43,20 @@ output_linear = linear_layer(input_tensor)
 ranks=tuple([f.shape[0] for f in factors]+[1])
 dims=tuple(f.shape[1] for f in factors)
 
-ttlinear_layer=TTLinear(dims,ranks,2, bias=use_bias)
+config_dict_default = {
+    'mode': 'default',
+    'decomp_format': 'tt',
+    'dim_list': dims,
+    'rank_list': ranks,
+    'in_order': 2,
+    'bias': use_bias
+}
+
+default_config=config.LRTLinearConfig(**config_dict_default)
+
+
+
+ttlinear_layer=LRTLinear.from_config(default_config)
 
 with torch.no_grad():
     for i, f in enumerate(factors_torch):
