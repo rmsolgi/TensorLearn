@@ -30,7 +30,7 @@ from . import shape_search
 from . import tensor_completion
 from . import tensor_geometry
 
-from . import neural_network
+
 
 
 
