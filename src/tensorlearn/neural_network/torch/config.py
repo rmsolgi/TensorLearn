@@ -19,14 +19,14 @@ class LRTLinearConfig(BaseModel):
 
     @field_validator('mode')
     def check_mode(cls,value):
-        if value is not None and value not in {'default', 'teacher'}:
-            raise ValueError("mode must be 'default' or 'teacher' or None")
+        if value is not None and value not in {'initial', 'teacher'}:
+            raise ValueError("mode must be 'initial' or 'teacher' or None")
         return value
     
     @model_validator(mode='before')
     def check_params_before(cls, values):
         mode = values.get('mode')
-        if mode == 'default':
+        if mode == 'initial':
             required_fields = ['decomp_format', 'dim_list', 'rank_list', 'in_order', 'bias']
         elif mode == 'teacher':
             required_fields = ['decomp_format','in_order', 'out_order', 'weight_transpose', 'shape_search_method', 'error']

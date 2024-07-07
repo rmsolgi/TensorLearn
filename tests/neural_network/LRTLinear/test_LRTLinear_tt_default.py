@@ -44,7 +44,7 @@ ranks=tuple([f.shape[0] for f in factors]+[1])
 dims=tuple(f.shape[1] for f in factors)
 
 config_dict_default = {
-    'mode': 'default',
+    'mode': 'initial',
     'decomp_format': 'tt',
     'dim_list': dims,
     'rank_list': ranks,

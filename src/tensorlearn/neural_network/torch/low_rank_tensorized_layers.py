@@ -179,8 +179,8 @@ class LRTLinear(nn.Module):
             self.register_parameter('bias', None)
     @classmethod
     def from_config(cls,config):
-        if config.mode!='default':
-            raise ValueError('config mode must be default.')
+        if config.mode!='initial':
+            raise ValueError('config mode must be initial.')
         decom_format=config.decomp_format
         dim_list=config.dim_list
         rank_list=config.rank_list

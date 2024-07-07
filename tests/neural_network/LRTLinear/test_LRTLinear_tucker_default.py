@@ -7,7 +7,7 @@ from tensorlearn.neural_network.torch import config, utils
 from tensorlearn.neural_network.torch.low_rank_tensorized_layers import LRTLinear
 
 config_dict_default = {
-    'mode': 'default',
+    'mode': 'initial',
     'decomp_format': 'tucker',
     'dim_list': [10, 3, 10,4],
     'rank_list': [10, 3, 10, 4],
