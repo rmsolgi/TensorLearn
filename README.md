@@ -14,6 +14,9 @@ pip install tensorlearn
 ```
 
 ## methods
+### Tensor Completion using CP and ALS
+- [cp_completion_als](#cpcompletionals-id)
+
 ### Decomposition Methods
 - [auto_rank_tt](#autoranktt-id)
 
@@ -42,6 +45,21 @@ pip install tensorlearn
 - [column_wise_kronecker](#colwisekron-id)
 
 ---
+
+## <a name="cpcompletionals-id"><\a>cp_completion_als
+```python
+tensorlearn.cp_completion_als(tensor, samples, rank, iteration, cp_iteration=100)
+```
+This implementation for tensor completion is based on CP decomposition given a fixed rank.
+
+### Arguments 
+- tensor < array >: The given tensor to be decomposed.
+- samples < array >: An array of zero and ones where ones are observed samples and zeros refer to missing entries. This array's size must be the same as tensor.
+- rank < int >: The rank for the CP decomposition.
+- iteration < int >: The iteration for the ALS algorithm.
+- cp_iteration < int >: The iteration for initialization.
+
+[Example](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP_example.py)
 
 
 ## <a name="autoranktt-id"></a>auto_rank_tt
