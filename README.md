@@ -30,7 +30,7 @@ pip install tensorlearn
 ### Tucker Decomposition 
 - [tucker_hosvd](#tuckerhosvd-id)
 - [tucker_to_tensor](#tuckertotensor-id)
-- [tucker_compression_ratio](#tuckercompressratio-id)
+- [tucker_compression_ratio](#tuckercr-id)
 ### Tensor Completion using CP and ALS
 - [cp_completion_als](#cpcompletionals-id)
 
@@ -67,6 +67,7 @@ This implementation for tensor completion is based on CP decomposition given a f
 
 - factors < list of arrays >: factor matrices of CP decomposition
 
+---
 
 
 
@@ -191,7 +192,7 @@ tensorlearn.cp_to_tensor(weights, factors)
 ---
 
 
-## <a name="cptotensor-id"></a>tucker_to_tensor
+## <a name="tuckertotensor-id"></a>tucker_to_tensor
 
 Returns the full tensor given the Tucker core factor and factor matrices
 
@@ -207,6 +208,7 @@ tensorlearn.tucker_to_tensor(core_factor,factor_matrices)
 
 ### Return
 - full tensor < array >
+---
 
 
 ## <a name="cpcr-id"></a>cp_compression_ratio
@@ -229,6 +231,25 @@ tensorlearn.cp_compression_ratio(weights, factors)
 [Example](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP_example.py)
 
 ---
+
+
+## <a name="tuckercr-id"></a>Tucker_compression_ratio
+
+Returns data compression ratio for Tucker decomposition.
+
+```python
+tensorlearn.tucker_compression_ratio(core_factor,factor_matrices)
+```
+### Arguments
+- core_factor < array >: Core factor of Tucker decomposition
+
+- factor_matrices < list of arrays >: factor matrices of Tucker decomposition
+
+### Return
+
+- Compression ratio < float >
+---
+
 
 ## <a name="tensorresize-id"></a>tensor_resize
 
@@ -316,4 +337,4 @@ Returns the [column wise Kronecker product (Sometimes known as Khatri Rao)](http
 
 - column wise Kronecker product < array >
 
-
+---
