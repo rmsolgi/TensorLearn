@@ -1,7 +1,7 @@
 # TensorLearn
 
 
-This is a project under development and more methods will be added. The current methods are functional.
+This is a library for some tensor decomposition and tensor-based methods. This is a project under development and more methods will be added. The current methods are functional.
     
 ## Installation
 
