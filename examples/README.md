@@ -4,7 +4,6 @@
 TensorLearn is a Python library distributed on [Pypi](https://pypi.org) to implement 
 tensor learning methods.
 
-This is a project under development. Yet, the available methods are functional. The requirment is [Numpy](https://numpy.org).
 
     
 ## Installation
