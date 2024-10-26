@@ -54,7 +54,7 @@ This implementation for tensor completion is based on CP decomposition given a f
 
 ### Arguments 
 - tensor < array >: The given tensor to be decomposed.
-- samples < array >: An array of zero and ones where ones are observed samples and zeros refer to missing entries. This array's size must be the same as tensor.
+- samples < array >:  An array of `0`s and `1`s where `1`s represent observed samples, and `0`s indicate missing entries. This array's size must match the dimensions of the tensor.
 - rank < int >: The rank for the CP decomposition.
 - iteration < int >: The iteration for the ALS algorithm.
 - cp_iteration < int >: The iteration for initialization.
