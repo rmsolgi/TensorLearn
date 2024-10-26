@@ -1,9 +1,7 @@
 # TensorLearn
 
 
-
-This is a project under development.
-
+This is a project under development and more methods will be added. The current methods are functional.
     
 ## Installation
 
