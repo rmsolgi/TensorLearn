@@ -14,23 +14,26 @@ pip install tensorlearn
 ```
 
 ## methods
+
+
+### Tensor Train Decomposition
+
+- [auto_rank_tt](#autoranktt-id)
+- [tt_to_tensor](#tttotensor-id)
+- [tt_compression_ratio](#ttcr-id)
+
+### CANDECOMP/PARAFAC (CP) Decomposition
+- [cp_als_rand_init](#cpalsrandinit-id)
+- [cp_to_tensor](#cptotensor-id)
+- [cp_compression_ratio](#cpcr-id)
+
+### Tucker Decomposition 
+- [tucker_hosvd](#tuckerhosvd-id)
+- [tucker_to_tensor](#tuckertotensor-id)
+- [tucker_compression_ratio](#tuckercompressratio-id)
 ### Tensor Completion using CP and ALS
 - [cp_completion_als](#cpcompletionals-id)
 
-### Decomposition Methods
-- [auto_rank_tt](#autoranktt-id)
-
-- [cp_als_rand_init](#cpalsrandinit-id)
-
-### Tensor Operations for Tensor-Train 
-- [tt_to_tensor](#tttotensor-id)
-
-- [tt_compression_ratio](#ttcr-id)
-
-### Tensor Operations for CANDECOMP/PARAFAC (CP)
-- [cp_to_tensor](#cptotensor-id)
-
-- [cp_compression_ratio](#cpcr-id)
 
 ### Tensor Operations
 - [tensor_resize](#tensorresize-id)
@@ -46,7 +49,7 @@ pip install tensorlearn
 
 ---
 
-## <a name="cpcompletionals-id"><\a>cp_completion_als
+## <a name="cpcompletionals-id"></a>cp_completion_als
 ```python
 tensorlearn.cp_completion_als(tensor, samples, rank, iteration, cp_iteration=100)
 ```
@@ -55,11 +58,16 @@ This implementation for tensor completion is based on CP decomposition given a f
 ### Arguments 
 - tensor < array >: The given tensor to be decomposed.
 - samples < array >:  An array of `0`s and `1`s where `1`s represent observed samples, and `0`s indicate missing entries. This array's size must match the dimensions of the tensor.
-- rank < int >: The rank for the CP decomposition.
+- rank < int >: The rank for CP decomposition.
 - iteration < int >: The iteration for the ALS algorithm.
 - cp_iteration < int >: The iteration for initialization.
 
-[Example](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP_example.py)
+### Return
+- weights < array >: the vector of normalization weights (lambda) in CP decomposition
+
+- factors < list of arrays >: factor matrices of CP decomposition
+
+
 
 
 ## <a name="autoranktt-id"></a>auto_rank_tt
@@ -79,7 +87,7 @@ This implementation of [tensor-train decomposition](https://github.com/rmsolgi/T
 ### Return
 - TT factors < list of arrays >: The list includes numpy arrays of factors (or TT cores) according to TT decomposition. Length of the list equals the dimension of the given tensor to be decomposed.
 
-[Example](https://github.com/rmsolgi/TensorLearn/blob/main/Tensor-Train%20Decomposition/example_tt.py)
+[Example](https://github.com/rmsolgi/TensorLearn/blob/main/examples/Tensor-Train%20Decomposition/example_tt.py)
 
 ---
 ## <a name="cpalsrandinit-id"></a>cp_als_rand_init
@@ -103,15 +111,23 @@ This is an implementation of [CANDECOMP/PARAFAC (CP) decomposition](https://gith
 ### Return
 - weights < array >: the vector of normalization weights (lambda) in CP decomposition
 
-- factors < list of arrays >: factor matrices of the CP decomposition
+- factors < list of arrays >: factor matrices of CP decomposition
 
-[Example](https://github.com/rmsolgi/TensorLearn/blob/main/CP_decomposition/CP_example.py)
+[Example](https://github.com/rmsolgi/TensorLearn/blob/main/examples/CP_decomposition/CP_example.py)
 
 ---
 
+## <a name="tuckerhosvd-id"></a>tucker_hosvd
+```python
+tensorlearn.tucker_hosvd(tensor, epsilon)
+```
+### Arguments 
+- tensor < array >: the given tensor to be decomposed
+- epsilon < float >: The error bound of decomposition in the range \[0,1\].
 
-
-
+### Return
+- core_factor < array >: Core tensor factor of Tucker 
+- factor_matrices < list >: A list of factor matrices of Tucker
 
 ## <a name="tttotensor-id"></a>tt_to_tensor
 
@@ -173,6 +189,24 @@ tensorlearn.cp_to_tensor(weights, factors)
 
 
 ---
+
+
+## <a name="cptotensor-id"></a>tucker_to_tensor
+
+Returns the full tensor given the Tucker core factor and factor matrices
+
+
+```python
+tensorlearn.tucker_to_tensor(core_factor,factor_matrices)
+```
+
+### Arguments
+- core_factor < array >: Core factor of Tucker decomposition
+
+- factor_matrices < list of arrays >: factor matrices of Tucker decomposition
+
+### Return
+- full tensor < array >
 
 
 ## <a name="cpcr-id"></a>cp_compression_ratio
